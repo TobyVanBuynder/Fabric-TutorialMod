@@ -2,6 +2,7 @@ package net.luxiepotato.tutorialmod.item;
 
 import net.fabricmc.fabric.api.itemgroup.v1.FabricItemGroup;
 import net.luxiepotato.tutorialmod.TutorialMod;
+import net.luxiepotato.tutorialmod.block.ModBlocks;
 import net.minecraft.item.ItemGroup;
 import net.minecraft.item.ItemStack;
 import net.minecraft.registry.Registries;
@@ -19,6 +20,8 @@ public class ModItemGroups {
                     .entries((displayContext, entries) -> {
                         entries.add(ModItems.RUBY);
                         entries.add(ModItems.RAW_RUBY);
+
+                        entries.add(ModBlocks.RUBY_BLOCK);
                     })
                     .build()
     );

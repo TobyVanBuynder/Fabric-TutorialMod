@@ -2,6 +2,7 @@ package net.luxiepotato.tutorialmod;
 
 import net.fabricmc.api.ModInitializer;
 
+import net.luxiepotato.tutorialmod.block.ModBlocks;
 import net.luxiepotato.tutorialmod.item.ModItemGroups;
 import net.luxiepotato.tutorialmod.item.ModItems;
 import org.slf4j.Logger;
@@ -16,5 +17,6 @@ public class TutorialMod implements ModInitializer {
 
 		ModItemGroups.registerItemGroups();
 		ModItems.registerModItems();
+		ModBlocks.registerModBlocks();
 	}
 }
