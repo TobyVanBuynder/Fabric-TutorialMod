@@ -1,4 +1,6 @@
 {
   "item.tutorialmod.ruby": "Ruby",
-  "item.tutorialmod.raw_ruby": "Raw Ruby"
+  "item.tutorialmod.raw_ruby": "Raw Ruby",
+
+  "itemgroup.tutorialmod.ruby": "Ruby Tutorial Group"
 }
