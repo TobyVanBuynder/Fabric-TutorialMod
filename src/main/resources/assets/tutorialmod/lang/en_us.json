@@ -19,5 +19,7 @@
 
   "block.tutorialmod.sound_block": "Sound Block",
 
-  "itemgroup.tutorialmod.ruby": "Ruby Tutorial Group"
+  "itemgroup.tutorialmod.ruby": "Ruby Tutorial Group",
+
+  "tooltip.tutorialmod.metal_detector.tooltip": "$5Finds valuables underground"
 }
