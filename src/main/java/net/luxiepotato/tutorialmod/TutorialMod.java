@@ -2,6 +2,7 @@ package net.luxiepotato.tutorialmod;
 
 import net.fabricmc.api.ModInitializer;
 
+import net.fabricmc.fabric.api.registry.FuelRegistry;
 import net.luxiepotato.tutorialmod.block.ModBlocks;
 import net.luxiepotato.tutorialmod.item.ModItemGroups;
 import net.luxiepotato.tutorialmod.item.ModItems;
@@ -18,5 +19,8 @@ public class TutorialMod implements ModInitializer {
 		ModItemGroups.registerItemGroups();
 		ModItems.registerModItems();
 		ModBlocks.registerModBlocks();
+
+		// TODO: Add to separate class
+		FuelRegistry.INSTANCE.add(ModItems.COAL_BRIQUETTE, 200);
 	}
 }
