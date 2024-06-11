@@ -15,7 +15,7 @@ public class ModItemGroups {
             Registries.ITEM_GROUP,
             new Identifier(TutorialMod.MOD_ID, "ruby"),
             FabricItemGroup.builder()
-                    .displayName(Text.translatable("itemgroup.ruby"))
+                    .displayName(Text.translatable("itemgroup.tutorialmod.ruby"))
                     .icon(() -> new ItemStack(ModItems.RUBY))
                     .entries((displayContext, entries) -> {
                         entries.add(ModItems.RUBY);
