@@ -25,6 +25,8 @@ public class ModItemGroups {
 
                         entries.add(ModItems.METAL_DETECTOR);
 
+                        entries.add(ModItems.RUBY_STAFF);
+
                         entries.add(ModItems.TOMATO);
 
 
