@@ -41,6 +41,16 @@ public class ModItems {
             new SwordItem(ModToolMaterial.RUBY, 7,
                     ModToolMaterial.RUBY.getMiningSpeedMultiplier(), new FabricItemSettings()));
 
+    // armor items
+    public static final Item RUBY_HELMET = registerItem("ruby_helmet",
+            new ArmorItem(ModArmorMaterial.RUBY,  ArmorItem.Type.HELMET, new FabricItemSettings()));
+    public static final Item RUBY_CHESTPLATE = registerItem("ruby_chestplate",
+            new ArmorItem(ModArmorMaterial.RUBY,  ArmorItem.Type.CHESTPLATE, new FabricItemSettings()));
+    public static final Item RUBY_LEGGINGS = registerItem("ruby_leggings",
+            new ArmorItem(ModArmorMaterial.RUBY,  ArmorItem.Type.LEGGINGS, new FabricItemSettings()));
+    public static final Item RUBY_BOOTS = registerItem("ruby_boots",
+            new ArmorItem(ModArmorMaterial.RUBY,  ArmorItem.Type.BOOTS, new FabricItemSettings()));
+
     // food items
     public static final Item TOMATO = registerItem("tomato",
             new Item(new FabricItemSettings().food(ModFoodComponents.TOMATO)));

@@ -30,5 +30,11 @@ public class ModItemTagProvider extends FabricTagProvider.ItemTagProvider {
 
         getOrCreateTagBuilder(ItemTags.SWORDS)
                 .add(ModItems.RUBY_SWORD);
+
+        getOrCreateTagBuilder(ItemTags.TRIMMABLE_ARMOR)
+                .add(ModItems.RUBY_HELMET)
+                .add(ModItems.RUBY_CHESTPLATE)
+                .add(ModItems.RUBY_LEGGINGS)
+                .add(ModItems.RUBY_BOOTS);
     }
 }
