@@ -5,6 +5,7 @@ import net.fabricmc.fabric.api.itemgroup.v1.FabricItemGroupEntries;
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
 import net.luxiepotato.tutorialmod.TutorialMod;
 import net.luxiepotato.tutorialmod.item.custom.MetalDetectorItem;
+import net.luxiepotato.tutorialmod.item.custom.ModArmorItem;
 import net.minecraft.item.*;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
@@ -42,8 +43,10 @@ public class ModItems {
                     ModToolMaterial.RUBY.getMiningSpeedMultiplier(), new FabricItemSettings()));
 
     // armor items
+    // only one ModArmorItem to prevent quadruple check on status effect
+    // weird way to do this
     public static final Item RUBY_HELMET = registerItem("ruby_helmet",
-            new ArmorItem(ModArmorMaterial.RUBY,  ArmorItem.Type.HELMET, new FabricItemSettings()));
+            new ModArmorItem(ModArmorMaterial.RUBY,  ArmorItem.Type.HELMET, new FabricItemSettings()));
     public static final Item RUBY_CHESTPLATE = registerItem("ruby_chestplate",
             new ArmorItem(ModArmorMaterial.RUBY,  ArmorItem.Type.CHESTPLATE, new FabricItemSettings()));
     public static final Item RUBY_LEGGINGS = registerItem("ruby_leggings",
