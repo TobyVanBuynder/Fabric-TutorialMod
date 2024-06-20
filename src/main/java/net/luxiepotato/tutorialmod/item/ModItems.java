@@ -4,6 +4,7 @@ import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.fabricmc.fabric.api.itemgroup.v1.FabricItemGroupEntries;
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
 import net.luxiepotato.tutorialmod.TutorialMod;
+import net.luxiepotato.tutorialmod.block.ModBlocks;
 import net.luxiepotato.tutorialmod.item.custom.MetalDetectorItem;
 import net.luxiepotato.tutorialmod.item.custom.ModArmorItem;
 import net.minecraft.item.*;
@@ -57,6 +58,11 @@ public class ModItems {
     // food items
     public static final Item TOMATO = registerItem("tomato",
             new Item(new FabricItemSettings().food(ModFoodComponents.TOMATO)));
+
+    // seed items
+    // AliasedBlockItem uses this name instead of the block's name
+    public static final Item TOMATO_SEEDS = registerItem("tomato_seeds",
+            new AliasedBlockItem(ModBlocks.TOMATO_CROP, new FabricItemSettings()));
 
     private static void addItemsToIngredientItemGroup(FabricItemGroupEntries entries) {
         entries.add(RUBY);

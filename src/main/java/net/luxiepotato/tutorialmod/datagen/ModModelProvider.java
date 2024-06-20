@@ -3,6 +3,7 @@ package net.luxiepotato.tutorialmod.datagen;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricModelProvider;
 import net.luxiepotato.tutorialmod.block.ModBlocks;
+import net.luxiepotato.tutorialmod.block.custom.TomatoCropBlock;
 import net.luxiepotato.tutorialmod.item.ModItems;
 import net.minecraft.data.client.BlockStateModelGenerator;
 import net.minecraft.data.client.ItemModelGenerator;
@@ -35,6 +36,8 @@ public class ModModelProvider extends FabricModelProvider {
 
         blockStateModelGenerator.registerDoor(ModBlocks.RUBY_DOOR);
         blockStateModelGenerator.registerTrapdoor(ModBlocks.RUBY_TRAPDOOR);
+
+        blockStateModelGenerator.registerCrop(ModBlocks.TOMATO_CROP, TomatoCropBlock.AGE, 0, 1, 2, 3, 4, 5);
     }
 
     @Override
