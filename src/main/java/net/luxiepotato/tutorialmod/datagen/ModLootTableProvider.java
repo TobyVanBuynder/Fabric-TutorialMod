@@ -3,6 +3,7 @@ package net.luxiepotato.tutorialmod.datagen;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricBlockLootTableProvider;
 import net.luxiepotato.tutorialmod.block.ModBlocks;
+import net.luxiepotato.tutorialmod.block.custom.CornCropBlock;
 import net.luxiepotato.tutorialmod.block.custom.TomatoCropBlock;
 import net.luxiepotato.tutorialmod.item.ModItems;
 import net.minecraft.block.Block;
@@ -10,6 +11,7 @@ import net.minecraft.data.server.loottable.BlockLootTableGenerator;
 import net.minecraft.enchantment.Enchantments;
 import net.minecraft.item.Item;
 import net.minecraft.loot.LootTable;
+import net.minecraft.loot.condition.AnyOfLootCondition;
 import net.minecraft.loot.condition.BlockStatePropertyLootCondition;
 import net.minecraft.loot.entry.ItemEntry;
 import net.minecraft.loot.entry.LeafEntry;
@@ -57,6 +59,23 @@ public class ModLootTableProvider extends FabricBlockLootTableProvider {
                         );
         addDrop(ModBlocks.TOMATO_CROP,
                 cropDrops(ModBlocks.TOMATO_CROP, ModItems.TOMATO, ModItems.TOMATO_SEEDS, tomatoCropLootBuilder));
+
+        // make them drop on both first stage and second stages instead of only second stage (MAX_AGE)
+        AnyOfLootCondition.Builder cornCropLootBuilder =
+                BlockStatePropertyLootCondition.builder(ModBlocks.CORN_CROP)
+                        .properties(
+                                StatePredicate.Builder.create()
+                                        .exactMatch(CornCropBlock.AGE, CornCropBlock.MAX_AGE - 1)
+                        )
+                        .or(
+                                BlockStatePropertyLootCondition.builder(ModBlocks.CORN_CROP)
+                                        .properties(
+                                                StatePredicate.Builder.create()
+                                                        .exactMatch(CornCropBlock.AGE, CornCropBlock.MAX_AGE)
+                                        )
+                        );
+        addDrop(ModBlocks.CORN_CROP,
+                cropDrops(ModBlocks.CORN_CROP, ModItems.CORN, ModItems.CORN_SEEDS, cornCropLootBuilder));
     }
 
     public LootTable.Builder copperLikeOreDrops(Block drop, Item item) {

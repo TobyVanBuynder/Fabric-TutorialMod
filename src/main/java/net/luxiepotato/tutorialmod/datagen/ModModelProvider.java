@@ -3,6 +3,7 @@ package net.luxiepotato.tutorialmod.datagen;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricModelProvider;
 import net.luxiepotato.tutorialmod.block.ModBlocks;
+import net.luxiepotato.tutorialmod.block.custom.CornCropBlock;
 import net.luxiepotato.tutorialmod.block.custom.TomatoCropBlock;
 import net.luxiepotato.tutorialmod.item.ModItems;
 import net.minecraft.data.client.BlockStateModelGenerator;
@@ -38,6 +39,7 @@ public class ModModelProvider extends FabricModelProvider {
         blockStateModelGenerator.registerTrapdoor(ModBlocks.RUBY_TRAPDOOR);
 
         blockStateModelGenerator.registerCrop(ModBlocks.TOMATO_CROP, TomatoCropBlock.AGE, 0, 1, 2, 3, 4, 5);
+        blockStateModelGenerator.registerCrop(ModBlocks.CORN_CROP, CornCropBlock.AGE, 0, 1, 2, 3, 4, 5, 6, 7, 8);
     }
 
     @Override
@@ -52,8 +54,10 @@ public class ModModelProvider extends FabricModelProvider {
         itemModelGenerator.register(ModItems.RUBY_SWORD, Models.HANDHELD);
 
         itemModelGenerator.register(ModItems.COAL_BRIQUETTE, Models.GENERATED);
-        itemModelGenerator.register(ModItems.TOMATO, Models.GENERATED);
         itemModelGenerator.register(ModItems.METAL_DETECTOR, Models.GENERATED);
+
+        itemModelGenerator.register(ModItems.TOMATO, Models.GENERATED);
+        itemModelGenerator.register(ModItems.CORN, Models.GENERATED);
 
         itemModelGenerator.registerArmor((ArmorItem) ModItems.RUBY_HELMET);
         itemModelGenerator.registerArmor((ArmorItem) ModItems.RUBY_CHESTPLATE);

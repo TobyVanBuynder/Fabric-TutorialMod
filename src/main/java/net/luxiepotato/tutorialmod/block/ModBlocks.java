@@ -3,6 +3,7 @@ package net.luxiepotato.tutorialmod.block;
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
 import net.luxiepotato.tutorialmod.TutorialMod;
+import net.luxiepotato.tutorialmod.block.custom.CornCropBlock;
 import net.luxiepotato.tutorialmod.block.custom.SoundBlock;
 import net.luxiepotato.tutorialmod.block.custom.TomatoCropBlock;
 import net.minecraft.block.*;
@@ -61,6 +62,8 @@ public class ModBlocks {
 
     public static final Block TOMATO_CROP = registerBlock("tomato_crop",
             new TomatoCropBlock(FabricBlockSettings.copyOf(Blocks.WHEAT)));
+    public static final Block CORN_CROP = registerBlock("corn_crop",
+            new CornCropBlock(FabricBlockSettings.copyOf(Blocks.WHEAT)));
 
 
 

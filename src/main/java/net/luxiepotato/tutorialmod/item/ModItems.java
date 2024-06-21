@@ -58,11 +58,15 @@ public class ModItems {
     // food items
     public static final Item TOMATO = registerItem("tomato",
             new Item(new FabricItemSettings().food(ModFoodComponents.TOMATO)));
+    public static final Item CORN = registerItem("corn",
+            new Item(new FabricItemSettings().food(ModFoodComponents.CORN)));
 
     // seed items
     // AliasedBlockItem uses this name instead of the block's name
     public static final Item TOMATO_SEEDS = registerItem("tomato_seeds",
             new AliasedBlockItem(ModBlocks.TOMATO_CROP, new FabricItemSettings()));
+    public static final Item CORN_SEEDS = registerItem("corn_seeds",
+            new AliasedBlockItem(ModBlocks.CORN_CROP, new FabricItemSettings()));
 
     private static void addItemsToIngredientItemGroup(FabricItemGroupEntries entries) {
         entries.add(RUBY);
