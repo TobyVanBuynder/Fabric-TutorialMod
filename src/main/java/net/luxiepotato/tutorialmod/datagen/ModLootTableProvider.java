@@ -51,6 +51,9 @@ public class ModLootTableProvider extends FabricBlockLootTableProvider {
         addDrop(ModBlocks.RUBY_DOOR, doorDrops(ModBlocks.RUBY_DOOR));
         addDrop(ModBlocks.RUBY_SLAB, slabDrops(ModBlocks.RUBY_SLAB));
 
+        addDrop(ModBlocks.DAHLIA);
+        addPottedPlantDrops(ModBlocks.POTTED_DAHLIA);
+
         BlockStatePropertyLootCondition.Builder tomatoCropLootBuilder =
                 BlockStatePropertyLootCondition.builder(ModBlocks.TOMATO_CROP)
                         .properties(

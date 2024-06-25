@@ -44,6 +44,8 @@
   "block.tutorialmod.ruby_door": "Ruby Door",
   "block.tutorialmod.ruby_trapdoor": "Ruby Trapdoor",
 
+  "block.tutorialmod.dahlia": "Dahlia",
+
   "itemgroup.tutorialmod.ruby": "Ruby Tutorial Group",
 
   "tooltip.tutorialmod.metal_detector.tooltip": "Finds valuables underground"

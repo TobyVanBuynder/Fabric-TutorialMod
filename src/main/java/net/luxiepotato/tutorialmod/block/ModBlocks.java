@@ -7,6 +7,7 @@ import net.luxiepotato.tutorialmod.block.custom.CornCropBlock;
 import net.luxiepotato.tutorialmod.block.custom.SoundBlock;
 import net.luxiepotato.tutorialmod.block.custom.TomatoCropBlock;
 import net.minecraft.block.*;
+import net.minecraft.entity.effect.StatusEffects;
 import net.minecraft.item.AliasedBlockItem;
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
@@ -64,6 +65,12 @@ public class ModBlocks {
             new TomatoCropBlock(FabricBlockSettings.copyOf(Blocks.WHEAT)));
     public static final Block CORN_CROP = registerBlock("corn_crop",
             new CornCropBlock(FabricBlockSettings.copyOf(Blocks.WHEAT)));
+
+    public static final Block DAHLIA = registerBlockWithItem("dahlia",
+            new FlowerBlock(StatusEffects.FIRE_RESISTANCE, 10,
+                    FabricBlockSettings.copyOf(Blocks.ALLIUM).nonOpaque().noCollision()));
+    public static final Block POTTED_DAHLIA = registerBlock("potted_dahlia",
+            new FlowerPotBlock(DAHLIA, FabricBlockSettings.copyOf(Blocks.POTTED_ALLIUM).nonOpaque()));
 
 
 
