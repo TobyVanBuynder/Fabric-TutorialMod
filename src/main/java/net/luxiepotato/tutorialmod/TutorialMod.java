@@ -6,6 +6,7 @@ import net.fabricmc.fabric.api.registry.FuelRegistry;
 import net.luxiepotato.tutorialmod.block.ModBlocks;
 import net.luxiepotato.tutorialmod.item.ModItemGroups;
 import net.luxiepotato.tutorialmod.item.ModItems;
+import net.luxiepotato.tutorialmod.util.ModCustomTrades;
 import net.luxiepotato.tutorialmod.util.ModLootTableModifiers;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -22,6 +23,8 @@ public class TutorialMod implements ModInitializer {
 		ModBlocks.registerModBlocks();
 
 		ModLootTableModifiers.modifyLootRables();
+
+		ModCustomTrades.registerCustomTrades();
 
 		// TODO: Add to separate class
 		FuelRegistry.INSTANCE.add(ModItems.COAL_BRIQUETTE, 200);
