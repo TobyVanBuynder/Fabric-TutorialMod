@@ -2,6 +2,8 @@ package net.luxiepotato.tutorialmod.util;
 
 import net.fabricmc.fabric.api.object.builder.v1.trade.TradeOfferHelper;
 import net.luxiepotato.tutorialmod.item.ModItems;
+import net.luxiepotato.tutorialmod.villager.ModVillagers;
+import net.minecraft.block.Blocks;
 import net.minecraft.enchantment.EnchantmentLevelEntry;
 import net.minecraft.enchantment.Enchantments;
 import net.minecraft.item.EnchantedBookItem;
@@ -73,6 +75,18 @@ public class ModCustomTrades {
                                 new ItemStack(ModItems.RUBY, 3),
                                 EnchantedBookItem.forEnchantment(new EnchantmentLevelEntry(Enchantments.PIERCING, 2)),
                                 6, 5, 0.05f
+                        )
+                )
+        );
+
+        // SOUND MASTER LVL 1
+        TradeOfferHelper.registerVillagerOffers(ModVillagers.SOUND_MASTER, 1,
+                factories -> factories.add(
+                        (entity, random) -> new TradeOffer(
+                                new ItemStack(Items.EMERALD, 5),
+                                new ItemStack(Items.REDSTONE, 2),
+                                new ItemStack(Blocks.NOTE_BLOCK, 1),
+                                6, 5, 0.5f
                         )
                 )
         );
