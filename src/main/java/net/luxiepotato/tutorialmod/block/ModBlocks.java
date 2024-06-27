@@ -6,6 +6,7 @@ import net.luxiepotato.tutorialmod.TutorialMod;
 import net.luxiepotato.tutorialmod.block.custom.CornCropBlock;
 import net.luxiepotato.tutorialmod.block.custom.SoundBlock;
 import net.luxiepotato.tutorialmod.block.custom.TomatoCropBlock;
+import net.luxiepotato.tutorialmod.sound.ModSounds;
 import net.minecraft.block.*;
 import net.minecraft.entity.effect.StatusEffects;
 import net.minecraft.item.AliasedBlockItem;
@@ -37,7 +38,7 @@ public class ModBlocks {
                     UniformIntProvider.create(4, 7)));
 
     public static final Block SOUND_BLOCK = registerBlockWithItem("sound_block",
-            new SoundBlock(FabricBlockSettings.copyOf(Blocks.IRON_BLOCK)));
+            new SoundBlock(FabricBlockSettings.copyOf(Blocks.IRON_BLOCK).sounds(ModSounds.SOUND_BLOCK_SOUNDS)));
 
     public static final Block RUBY_STAIRS = registerBlockWithItem("ruby_stairs",
             new StairsBlock(RUBY_BLOCK.getDefaultState(), FabricBlockSettings.copyOf(Blocks.IRON_BLOCK)));

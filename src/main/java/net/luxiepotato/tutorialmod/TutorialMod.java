@@ -6,6 +6,7 @@ import net.fabricmc.fabric.api.registry.FuelRegistry;
 import net.luxiepotato.tutorialmod.block.ModBlocks;
 import net.luxiepotato.tutorialmod.item.ModItemGroups;
 import net.luxiepotato.tutorialmod.item.ModItems;
+import net.luxiepotato.tutorialmod.sound.ModSounds;
 import net.luxiepotato.tutorialmod.util.ModCustomTrades;
 import net.luxiepotato.tutorialmod.util.ModLootTableModifiers;
 import net.luxiepotato.tutorialmod.villager.ModVillagers;
@@ -26,8 +27,9 @@ public class TutorialMod implements ModInitializer {
 		ModLootTableModifiers.modifyLootRables();
 
 		ModCustomTrades.registerCustomTrades();
-
 		ModVillagers.registerVillagers();
+
+		ModSounds.registerSounds();
 
 		// TODO: Add to separate class
 		FuelRegistry.INSTANCE.add(ModItems.COAL_BRIQUETTE, 200);
